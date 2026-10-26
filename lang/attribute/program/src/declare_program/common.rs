@@ -96,8 +96,9 @@ pub fn convert_idl_type_to_str(ty: &IdlType, is_const: bool) -> Result<String, s
         IdlType::F64 => "f64".into(),
         IdlType::U128 => "u128".into(),
         IdlType::I128 => "i128".into(),
-        IdlType::U256 => "u256".into(),
-        IdlType::I256 => "i256".into(),
+        // Rust has no 256-bit integers. These are the 32 little-endian bytes
+        // the TS coder reads and writes, two's complement for `i256`.
+        IdlType::U256 | IdlType::I256 => "[u8; 32]".into(),
         IdlType::Bytes => if is_const {
             "&[u8]"
         } else {
