@@ -4,7 +4,7 @@
     "name": "wide_integers",
     "version": "0.1.0",
     "spec": "0.1.0",
-    "description": "Coverage for u256 and i256 in declare_program!"
+    "description": "Regression coverage for declare_program! u256 and i256 types"
   },
   "instructions": [
     {

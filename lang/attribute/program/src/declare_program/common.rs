@@ -869,6 +869,8 @@ mod tests {
         assert_eq!(s(&IdlType::Bool), "bool");
         assert_eq!(s(&IdlType::U8), "u8");
         assert_eq!(s(&IdlType::U64), "u64");
+        assert_eq!(s(&IdlType::U256), "[u8; 32]");
+        assert_eq!(s(&IdlType::I256), "[u8; 32]");
         assert_eq!(s(&IdlType::String), "::std::string::String");
         assert_eq!(s(&IdlType::Pubkey), "anchor_lang::prelude::Pubkey");
 
