@@ -29,6 +29,7 @@ The minor version will be incremented upon a breaking change and the patch versi
 - cli: Reject `anchor program deploy` when `--program-id` does not match the program keypair pubkey ([#5129](https://github.com/otter-sec/anchor/pull/5129)).
 - lang: Improve macro hygiene to address potential issues with key validation ([#5105](https://github.com/otter-sec/anchor/pull/5105)).
 - client: Ignore logs from failed transactions in event subscriptions so reverted executions do not emit events ([#4884](https://github.com/otter-sec/anchor/pull/4884)).
+- lang: Generate `u256` and `i256` as `[u8; 32]` in `declare_program!`, so IDLs that use them compile ([#5224](https://github.com/otter-sec/anchor/pull/5224)).
 - lang: Accept arbitrary expressions in `declare_id!`. ([#5010](https://github.com/otter-sec/anchor/pull/5010)).
 - lang: Avoid an unnecessary stack allocation when snapshotting CPI return data ([#4931](https://github.com/otter-sec/anchor/pull/4931)).
 - lang: Raise an error when modifying data in an account that has had its ownership changed. ([#5011](https://github.com/otter-sec/anchor/pull/5011)).
