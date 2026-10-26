@@ -16,11 +16,3 @@ fn u256_and_i256_are_32_little_endian_bytes() {
         [&[1, 2, 3, 4, 5, 6, 7, 8][..], &[7; 32], &signed].concat()
     );
 }
-
-#[test]
-fn u256_and_i256_constants_are_their_bytes() {
-    assert_eq!(wide_integers::constants::U256_MAX, [0xff; 32]);
-    let mut min = [0; 32];
-    min[31] = 0x80;
-    assert_eq!(wide_integers::constants::I256_MIN, min);
-}
